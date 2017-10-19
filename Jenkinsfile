@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Use tools') {
       steps {
-        tool(name: 'blah', type: 'nodejs')
+        tool(name: '8.x', type: 'nodejs')
       }
     }
     stage('Verify tools') {
