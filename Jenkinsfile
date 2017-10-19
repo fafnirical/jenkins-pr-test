@@ -1,16 +1,18 @@
 pipeline {
   agent any
   stages {
-    stage('Dependencies') {
+    stage('Use tools') {
       steps {
-        sh 'npm install --no-progress'
+        tool(name: 'blah', type: 'nodejs')
       }
     }
-    stage('Lint JavaScript') {
+    stage('Verify tools') {
       steps {
-        sh 'npm run lint'
-        junit 'tests/results/*.xml'
+        sh 'echo \'hello\''
       }
     }
+  }
+  environment {
+    foo = 'bar'
   }
 }
