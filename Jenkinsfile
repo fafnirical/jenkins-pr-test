@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Verify tools') {
       steps {
-        sh 'echo \'hello\''
+        sh 'node --version'
+        sh 'npm --version'
       }
     }
   }
